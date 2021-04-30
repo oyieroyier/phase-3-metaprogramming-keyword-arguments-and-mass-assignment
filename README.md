@@ -1,10 +1,10 @@
-# Keyword Arguments and Mass Assignment
+# Keyword Arguments
 
-## Objectives
+## Learning Goals
 
-1. Define keyword arguments and learn why they are useful.
-2. Define mass assignment and learn why it is useful.
-3. Practice using keyword arguments and mass assignment.
+- Define keyword arguments and learn why they are useful.
+- Define mass assignment and learn why it is useful.
+- Practice using keyword arguments and mass assignment.
 
 ## Introduction
 

@@ -30,7 +30,7 @@ difference when the function is called.
 
 What happens if another developer who is working on our code base _doesn't_ see
 the file where the method is defined, but only sees the method being invoked?
-Maybe it's not clear to them which argument is which &mdash; after all, when you
+Maybe it's not clear to them which argument is which — after all, when you
 invoke methods, the arguments aren't labeled or anything. Let's take a look at
 what type of disaster would befall us:
 

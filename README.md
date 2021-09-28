@@ -168,8 +168,8 @@ end
 Now, we have the added benefit of being able to use something called **mass
 assignment** to instantiate new people objects. If a method is defined to accept
 keyword arguments, we can create the hash that the method is expecting to accept
-as an argument, set that hash equal to a variable, and simply pass that variable
-in to the method as an argument. Let's take a look:
+as an argument, assign that hash to a variable, and simply pass the variable in
+to the method as an argument. Let's take a look:
 
 ```ruby
 person_attributes = { name: "Sophie", age: 26 }
@@ -177,9 +177,19 @@ sophie = Person.new(person_attributes)
 # => #<Person:0x007f9bd5814ae8 @name="Sophie", @age=26>
 ```
 
-This might not seem particularly useful now, but when we start building web
-applications, we'll understand more about how necessary this trick really is.
-For now, just take our word for it.
+Again, in order for this to work, we have to set up the initialize method to use
+keyword arguments. If it was set up to take positional arguments instead,
+calling the method as we did above would return an argument error:
+
+```text
+ArgumentError: wrong number of arguments (given 1, expected 2)
+```
+
+At this point, it might not seem particularly useful to be able to pass in a
+hash as an argument. However, as we'll learn in the next lesson, one thing it
+enables us to do is write our code for initializing instances of a class in a
+more abstract, flexible and error-proof way. When we start building web
+applications, we'll understand more about how helpful this approach really is.
 
 **Note**: Starting with Ruby version 3, the use of a
 [hash for keyword arguments will be deprecated][hash keyword deprecation], so
@@ -195,7 +205,7 @@ sophie = Person.new(**person_attributes)
 
 Using **keyword arguments** makes our Ruby methods more flexible by allowing
 arguments to be passed in any order, and by allowing our methods to receive a
-hash of key-value pairs as arguments.
+hash of key-value pairs as an argument.
 
 ## Resources
 
